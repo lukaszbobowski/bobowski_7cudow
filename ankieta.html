@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=pl>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="style/ankietaStyle.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="style/ankietaStyle1.css">
+    <script src="menuScript.js" defer></script>
+    <title>Ankieta</title>
+</head>
+<body>
+    <div id="logo">
+        <div id="logo-in">7CŚ</div>
+    </div>
+    <div class="dropdown">
+        <button onclick="changeButton()" id="mainbutton" class="dropbtn">></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Strona główna</a>
+          <a href="ankieta.html">Ankieta</a>
+        </div>
+    </div>
+    <div class="formlayout">
+    <form action="mailto:lu.bobowski@gmail.com" method="post">
+        <h1>Wypełnij formularz</h1>
+        
+        Nazwisko: <input type=text name=nazwisko id=nazwisko>
+        Imię: <input type=text name=imie id=imie>
+        <ol>
+            <li>Z jakiej przeglądarki korzystasz?</li>
+            <select name=przegladarka id=przegladarka>
+                <option>Chrome</option>
+                <option>Safari</option>
+                <option>Firefox</option>
+                <option>Edge</option>
+                <option>Opera</option>
+                <option>Internet Explorer</option>
+                <option>Inne</option>
+            </select>
+            <li>Czy podoba Ci się ta strona?:</li>
+            <input type=radio id=tak name=wakacje value=tak>
+            <label for=tak>Tak</label>
+            <input type=radio id=nie name=wakacje value=nie checked>
+            <label for=nie>Nie</label>
+            <input type=radio id=niepewien name=wakacje value=niepewien checked>
+            <label for=niepewien>Nie jestem pewien</label>
+            
+            <li>Zaznacz miejsca, które rozpoznajesz, i/lub które chciałbyś odwiedzić:</li>
+            <select multiple name=miejsca id=miejsca>
+                <option>Wielki Mur Chiński</option>
+                <option>Petra</option>
+                <option>Statua Chrystusa Zbawiciela w Rio de Janeiro</option>
+                <option>Machu Picchu</option>
+                <option>Chichén Itzá</option>
+                <option>Koloseum</option>
+                <option>Tadź Mahal</option>
+            </select>
+        
+            <label for=uwagi><li>Czy masz jakieś uwagi na temat strony?</li></label>
+            <textarea name=uwagi id="uwagi" cols=20 rows=4 maxlength=50>Przykładowy tekst</textarea>
+        </ol>
+        <input type="reset">
+    
+        <input type="submit">
+    </div>
+    </form>
+</body>
+</html>
